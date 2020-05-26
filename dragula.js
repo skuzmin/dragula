@@ -632,7 +632,7 @@ function animate (prevRect, target) {
     transition: 'none',
     transform: 'translate(' + (prevRect.left - currentRect.left) + 'px,' + (prevRect.top - currentRect.top) + 'px)'
   });
-  target.offsetWidth; // repaint
+  target.focus(); // repaint
   Object.assign(target.style, {transition: 'all ' + animateDuration + 'ms', transform: 'translate(0,0)'});
   clearTimeout(target.animated);
   target.animated = setTimeout(function () {
